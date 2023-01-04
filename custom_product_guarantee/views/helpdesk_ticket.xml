@@ -11,9 +11,9 @@
                 <xpath expr="//button[@name='assign_ticket_to_self']" position="after">
                     <field name="x_product_guarantee_id" invisible="1"/>
                     <button name="open_supplier_guarantee" string="Enviar a proveedor" type="object" class="oe_highlight"
-                            groups="helpdesk.group_helpdesk_user" attrs="{'invisible': [('x_product_guarantee_id', '=', False)]}"/>
+                            groups="helpdesk.group_helpdesk_user" attrs="{'invisible': [('x_product_guarantee_id', '=', False),('x_guarantee_denied_id','!=',False)]}"/>
                     <button name="denied_guarantee" string="Denegar garantía" type="object" class="oe_highlight"
-                            groups="helpdesk.group_helpdesk_user" attrs="{'invisible': [('x_product_guarantee_id', '=', False)]}"/>
+                            groups="helpdesk.group_helpdesk_user" attrs="{'invisible': [('x_product_guarantee_id', '=', False),('x_guarantee_supplier_id','!=',False)]}"/>
                 </xpath>
 
                 <xpath expr="//button[@name='action_open_helpdesk_ticket']" position="before">
